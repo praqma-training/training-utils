@@ -1,0 +1,19 @@
+#!/bin/bash
+# This is a live graph log that truncates output width.
+# More suitable for split screen views with limited screen
+# real estate.
+
+commits=$1
+#Defaults commits to 10
+if [ -z "$1" ];
+  then
+  commits=10
+fi
+
+
+while :
+do
+  clear
+  git --no-pager log -$commits --graph --branches  --pretty=format:'%C(auto)%h %C(blue)%<|(24,trunc)%aN%C(auto) %C(reset)%<|(40,trunc)%s'
+  sleep 2
+done

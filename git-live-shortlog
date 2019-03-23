@@ -1,0 +1,8 @@
+#!/bin/bash
+
+while :
+do
+  clear
+  gitall shortlog -sn
+  sleep 10
+done
