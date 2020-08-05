@@ -11,6 +11,6 @@ fi
 while :
 do
   clear
-  git --no-pager log -$commits --graph --all --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s' --abbrev-commit --date=relative
+  git --no-pager log -$commits --graph --all --pretty=format:'%Cred%h%Creset %C(cyan)%aN %C(yellow)%d%Creset %s' --abbrev-commit --date=relative
   sleep 2
 done
